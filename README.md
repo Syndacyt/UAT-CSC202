@@ -24,3 +24,6 @@ Whats new:
 - Arrays and Lists
 
 [Click here](https://www.youtube.com/watch?v=RHeoZKQYxpM&list=PLU5oItoSZJZjDSDvIKPQUZvYhpYrKtmjI&index=3) for video
+
+I have fixed what I could. Below is the final youtube video
+[Click here](https://youtu.be/xdjUfAsjM7k) for video

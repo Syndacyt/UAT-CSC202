@@ -1,4 +1,3 @@
-﻿Elden Ring, FromSoftware Inc., Adventure, "C:\Images\boxartEldenring.jpg"
-World of Warcraft, Blizzard Entertainment, MMORPG, "C:\Images\BoxArtWoW.jpeg"
-Dark Souls 3, FromSoftware Inc., Adventure, "C:\Images\boxartdarksouls.jpg"
-Dark Souls 2, FromSoftware Inc., Adventure, "placeholder"
+﻿Elden Ring, FromSoftware Inc., Adventure, C:\Users\Michael\Documents\CSC202\CompletionistPrototype\Resources\boxartEldenring.jpg
+World of Warcraft, Blizzard Entertainment, MMORPG, C:\Users\Michael\Documents\CSC202\CompletionistPrototype\Resources\wowboxart.jpeg
+Dark Souls 3, FromSoftware Inc., Adventure, C:\Users\Michael\Documents\CSC202\CompletionistPrototype\Resources\boxartdarksouls.jpg

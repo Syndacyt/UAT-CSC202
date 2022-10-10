@@ -21,13 +21,11 @@ namespace CompletionistPrototype
             InitializeComponent();
         }
 
-
-
         private void MainForm_Load(object sender, EventArgs e)
         {
 
             List<Game> games = LoadGames();
-            LoadImages(games);
+            LoadUI(games);
 
         }
 
@@ -93,10 +91,59 @@ namespace CompletionistPrototype
 
         }
 
-        private void LoadImages(List<Game> games) 
+        private void LoadUI(List<Game> gameList) 
         {
-            
+            // Get the size of the window
+            int width = ClientRectangle.Width;
+            int height = ClientRectangle.Height;
+
+            int column = 0;
+
+            for (int i = 0; i < gameList.Count; i++)
+            {
+                // Create a new button
+                Button newButton = new Button();
+                // Add the button to MainForm
+                this.Controls.Add(newButton);
+
+
+                // Button Size and Position Properties
+                newButton.Size = new Size(width / 15, height / 5);
+
+                // Start on the left side of the group box
+                // Expand right 5 columns
+                // Move down a tow
+                //newButton.Location = new Point((buttonGroup.Width / 2) - (newButton.Width / 2), (buttonGroup.Height / 2) - (newButton.Height / 2));
+
+                newButton.Location = new Point(((width / 2) - ((newButton.Width * 5) / 4)) - (newButton.Width / 2) + (newButton.Width * column), (height / 2) - (newButton.Height / 2));
+                column += 1;
+
+                // Button Image Properties.
+                newButton.BackgroundImage = System.Drawing.Image.FromFile(gameList[i].image);
+                newButton.BackgroundImageLayout = ImageLayout.Stretch;
+
+                // Button Name
+                newButton.Name = gameList[i].title;
+
+                // Button Clicked action
+                newButton.Click += new EventHandler(ButtonClick);
+            }
         }
 
+        private void ButtonClick(object sender, EventArgs e) 
+        {
+            // Store button that was clicked
+            Button button = (Button)sender;
+
+            // Check which button was clicked
+            // To determine which game form should be loaded
+            if (button.Name == "Elden Ring") 
+            {
+                (new EldenRing()).Show();
+            }
+
+            // Close this form.
+            this.Close();
+        }
     }
 }
